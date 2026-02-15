@@ -1,11 +1,18 @@
 import Redis from "ioredis";
 
 const redis = new Redis(process.env.REDIS_URL!, { 
-  tls: {}, 
+
                                                  
   maxRetriesPerRequest: null, 
   enableReadyCheck: false, 
-  reconnectOnError: () => true, }
+  reconnectOnError: () => true, 
+retryStrategy(times) {
+    return Math.min(times * 100, 2000);
+  },
+  tls: process.env.REDIS_URL?.startsWith("rediss://")
+    ? {}
+    : undefined,
+}
                        );
 
 redis
