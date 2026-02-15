@@ -1,4 +1,3 @@
-console.log(`Server is running on test 1`);
 "use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
