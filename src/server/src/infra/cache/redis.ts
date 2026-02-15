@@ -1,6 +1,12 @@
 import Redis from "ioredis";
 
-const redis = new Redis(process.env.REDIS_URL!);
+const redis = new Redis(process.env.REDIS_URL!, { 
+  tls: {}, 
+                                                 
+  maxRetriesPerRequest: null, 
+  enableReadyCheck: false, 
+  reconnectOnError: () => true, }
+                       );
 
 redis
   .on("connect", () => console.log("✅ Connected to Redis"))
