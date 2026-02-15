@@ -22,7 +22,7 @@ const passport_facebook_1 = require("passport-facebook");
 const passport_twitter_1 = require("passport-twitter");
 
 const database_config_1 = __importDefault(require("@/infra/database/database.config"));
-console.log(`Server is running on test 1`);
+
 const tokenUtils_1 = require("@/shared/utils/auth/tokenUtils");
 
 function configurePassport() {
