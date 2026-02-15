@@ -371,3 +371,7 @@ ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(Postgr
 [2026-02-15T06:31:22.442Z] [31MERROR[39M: Invalid access token, please log in
 [2026-02-15T06:31:22.516Z] [31MERROR[39M: Invalid access token, please log in
 [2026-02-15T06:35:05.094Z] [31MERROR[39M: Invalid access token, please log in
+[2026-02-15T09:35:38.225Z] [31MERROR[39M: Invalid access token, please log in
+[2026-02-15T09:35:38.500Z] [31MERROR[39M: Invalid access token, please log in
+[2026-02-15T09:35:48.919Z] [31MERROR[39M: Invalid access token, please log in
+[2026-02-15T09:35:48.964Z] [31MERROR[39M: Invalid access token, please log in
