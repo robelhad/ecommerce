@@ -96,7 +96,7 @@ export const createApp = async () => {
       store: new RedisStore({ client: redisClient }),
       secret: process.env.SESSION_SECRET!,
       resave: false,
-      saveUninitialized: true, // Keeps guest sessionId from the first request
+      saveUninitialized: false, // Keeps guest sessionId from the first request
       proxy: true, // Ensures secure cookies work with proxy
       cookie: {
         httpOnly: true,
