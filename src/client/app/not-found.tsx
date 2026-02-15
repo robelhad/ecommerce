@@ -12,6 +12,7 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import Footer from "./components/layout/Footer";
 
 const NotFoundPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -40,9 +41,18 @@ const NotFoundPage = () => {
   ];
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 flex flex-col items-center justify-center p-6 relative overflow-hidden">
+     <p className="text-gray-700 text-lg leading-relaxed w-full">
+            
+            Ethiopian refugees and immigrants face many challenges as they work to build a new life in the country they once dreamed of. These difficulties often arise from adjusting to an unfamiliar culture, as well as from the general public&apos;s limited understanding of the experiences African newcomers carry with them. One story illustrates this gap clearly. Years ago, a teenager was shot by police in Virginia. In Ethiopia, when police tell someone to stop, the person may choose to stop or run, and often the police will not pursue them aggressively. Here, however, when an officer gives a command, compliance is required regardless of innocence or guilt. This young man did not know that difference. He tried to run, believing he could simply get away as he might have back home. The police assumed he was fleeing from a crime and shot him, even though he was innocent.
+
+</p><p>Our organization exists to support the community through these kinds of challenges. We offer a variety of programs, including pharmacy technician training, computer classes, dental assistant training, and English as a second language. We also provide job placement assistance, counseling, immigration support, and free health services. Once a month, we host a brainstorming session focused on helping individuals pursue their dreams, navigate the system, and use available opportunities to their advantage. And if what you&apos;re looking for doesn&apos;t exist yet, we&apos;re here to help you find the path you need.
+          
+          </p>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.1, scale: 1 }}
@@ -91,7 +101,7 @@ const NotFoundPage = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="relative z-10 max-w-2xl w-full text-center"
       >
-        {/* 404 Number with animation */}
+        {/* RoHa Inc. Number with animation */}
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
@@ -111,7 +121,7 @@ const NotFoundPage = () => {
             />
             <div className="relative bg-white rounded-full p-8 shadow-lg border border-indigo-100 inline-block">
               <span className="text-6xl md:text-8xl font-bold text-indigo-600">
-                404
+                RoHa Inc.
               </span>
             </div>
           </div>
@@ -125,13 +135,11 @@ const NotFoundPage = () => {
           className="mb-8"
         >
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Page Not Found
+            One stop shop for your IT turn key Solution.
           </h1>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-md mx-auto">
-            The page you&apos;re looking for doesn&apos;t exist. Let&apos;s help
-            you find what you need.
-          </p>
-        </motion.div>
+          
+         
+          </motion.div>
 
         {/* Search bar */}
         <motion.div
@@ -271,6 +279,7 @@ const NotFoundPage = () => {
           </div>
         </motion.div>
       </motion.div>
+       <main className="flex flex-col min-h-screen w-full"> <Footer /></main>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+declare module "passport-azure-ad";
+
 declare namespace Express {
   export interface Request {
     user?: {

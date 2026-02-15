@@ -1,3 +1,4 @@
+
 import { Router } from "express";
 import { Server as SocketIOServer } from "socket.io";
 import usersRoutes from "@/modules/user/user.routes";
@@ -5,11 +6,15 @@ import authRoutes from "@/modules/auth/auth.routes";
 import productRoutes from "@/modules/product/product.routes";
 import reviewRoutes from "@/modules/review/review.routes";
 import categoryRoutes from "@/modules/category/category.routes";
+
 import orderRoutes from "@/modules/order/order.routes";
+
 import checkoutRoutes from "@/modules/checkout/checkout.routes";
+
 import cartRoutes from "@/modules/cart/cart.routes";
 import reportRoutes from "@/modules/reports/reports.routes";
 import analyticsRoutes from "@/modules/analytics/analytics.routes";
+
 import paymentRoutes from "@/modules/payment/payment.routes";
 import addressRoutes from "@/modules/address/address.routes";
 import shipmentRoutes from "@/modules/shipment/shipment.routes";
@@ -22,7 +27,7 @@ import variantsRoutes from '@/modules/variant/variant.routes'
 
 export const configureV1Routes = (io: SocketIOServer) => {
   const router = Router();
-
+  
   router.use("/users", usersRoutes);
   router.use("/auth", authRoutes);
   router.use("/products", productRoutes);

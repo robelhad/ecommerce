@@ -234,7 +234,7 @@ const MaintenancePage = () => {
               </span>
             </div>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Contact our support team at support@ss-commerce.com for urgent
+              Contact our support team at rohainc@outlook.com for urgent
               matters
             </p>
           </div>

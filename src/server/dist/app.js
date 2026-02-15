@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -19,6 +20,7 @@ require("./infra/cloudinary/config");
 const body_parser_1 = __importDefault(require("body-parser"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const cors_1 = __importDefault(require("cors"));
+
 const helmet_1 = __importDefault(require("helmet"));
 const express_mongo_sanitize_1 = __importDefault(require("express-mongo-sanitize"));
 const hpp_1 = __importDefault(require("hpp"));
@@ -26,13 +28,18 @@ const morgan_1 = __importDefault(require("morgan"));
 const logger_1 = __importDefault(require("./infra/winston/logger"));
 const compression_1 = __importDefault(require("compression"));
 const passport_1 = __importDefault(require("passport"));
+
 const express_session_1 = __importDefault(require("express-session"));
 const connect_redis_1 = require("connect-redis");
+
 const redis_1 = __importDefault(require("./infra/cache/redis"));
+
 const passport_2 = __importDefault(require("./infra/passport/passport"));
+console.log(`Server is running on test`);
 const constants_1 = require("./shared/constants");
 const globalError_1 = __importDefault(require("./shared/errors/globalError"));
 const logRequest_1 = require("./shared/middlewares/logRequest");
+
 const routes_1 = require("./routes");
 const graphql_1 = require("./graphql");
 const webhook_routes_1 = __importDefault(require("./modules/webhook/webhook.routes"));

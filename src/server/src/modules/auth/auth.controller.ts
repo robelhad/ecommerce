@@ -9,6 +9,7 @@ import AppError from "@/shared/errors/AppError";
 import { CartService } from "../cart/cart.service";
 import { makeLogsService } from "../logs/logs.factory";
 
+
 const { ...clearCookieOptions } = cookieOptions;
 
 export class AuthController {
@@ -22,6 +23,7 @@ export class AuthController {
     const start = Date.now();
     const end = Date.now();
     const { name, email, password, role } = req.body;
+    
     const { user, accessToken, refreshToken } =
       await this.authService.registerUser({
         name,

@@ -1,4 +1,6 @@
+
 import stripe from "@/infra/payment/stripe";
+
 import AppError from "@/shared/errors/AppError";
 import prisma from "@/infra/database/database.config";
 
@@ -49,6 +51,7 @@ export class CheckoutService {
       ? process.env.CLIENT_URL_PROD
       : process.env.CLIENT_URL_DEV;
 
+    console.log(clientUrl);
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: lineItems,

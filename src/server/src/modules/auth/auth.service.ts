@@ -10,6 +10,7 @@ import jwt from "jsonwebtoken";
 import { AuthRepository } from "./auth.repository";
 import BadRequestError from "@/shared/errors/BadRequestError";
 import NotFoundError from "@/shared/errors/NotFoundError";
+import bcrypt from "bcryptjs";
 
 export class AuthService {
   constructor(private authRepository: AuthRepository) {}
@@ -28,12 +29,12 @@ export class AuthService {
         "This email is already registered, please log in instead."
       );
     }
-
+    const hashed = await bcrypt.hash(password, 12);
     // Force new registrations to be USER role only for security
     const newUser = await this.authRepository.createUser({
       email,
       name,
-      password,
+      password: hashed,
       role: ROLE.USER, // Ignore any role passed from client for security
     });
 

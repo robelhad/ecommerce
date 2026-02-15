@@ -9,8 +9,16 @@ import { useSignInMutation } from "@/app/store/apis/AuthApi";
 import GoogleIcon from "@/app/assets/icons/google.png";
 import FacebookIcon from "@/app/assets/icons/facebook.png";
 import TwitterIcon from "@/app/assets/icons/twitter.png";
+import MicrosoftIcon from "@/app/assets/icons/microsoft.png";
 import Image from "next/image";
 import { AUTH_API_BASE_URL } from "@/app/lib/constants/config";
+//import { SocialLoginButtons } from "@/components/auth/SocialLoginButtons";
+
+const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const handleMicrosoftLogin = () => {
+    window.location.href = `${backendUrl}/auth/microsoft`;
+  };
+
 
 interface InputForm {
   email: string;
@@ -53,7 +61,7 @@ const SignIn = () => {
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 text-center mb-6">
             Sign In
           </h2>
-
+            
           {error && (
             <div className="bg-red-50 border border-red-300 text-red-600 text-center text-sm p-3 rounded mb-4">
               An unexpected error occurred
@@ -116,7 +124,7 @@ const SignIn = () => {
           </div>
 
           {/* Testing Instructions */}
-          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <div className="hidden mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <h3 className="text-sm font-semibold text-blue-800 mb-2">
               🧪 Testing Accounts
             </h3>
@@ -153,6 +161,11 @@ const SignIn = () => {
                 provider: "google",
                 icon: GoogleIcon,
                 label: "Sign in with Google",
+              },
+              {
+                provider: "microsoft",
+                icon: MicrosoftIcon,
+                label: "Sign in with Microsoft",
               },
               {
                 provider: "facebook",

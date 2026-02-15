@@ -67,9 +67,9 @@ const Navbar = () => {
             {/* Logo */}
             <Link
               href="/"
-              className="font-medium text-lg sm:text-xl lg:text-xl text-gray-900 flex-shrink-0"
+              className="font-medium text-xl sm:text-2xl lg:text-3xl text-gray-900 flex-shrink-0"
             >
-              Ecommerce
+              RoHa Inc.
             </Link>
 
             {/* Desktop Search Bar */}

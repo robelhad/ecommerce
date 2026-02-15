@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
+import { v4 as uuid } from "uuid";
 export type Toast = {
   id: string;
   message: string | undefined;
@@ -20,7 +20,8 @@ export const toastSlice = createSlice({
   reducers: {
     addToast: (state, action: PayloadAction<Omit<Toast, "id">>) => {
       console.log("action.payload => ", action.payload);
-      state.toasts.push({ id: crypto.randomUUID(), ...action.payload });
+      //state.toasts.push({ id: crypto.randomUUID(), ...action.payload });
+      state.toasts.push({ id: uuid(), ...action.payload });
     },
     removeToast: (state, action: PayloadAction<string>) => {
       state.toasts = state.toasts.filter(

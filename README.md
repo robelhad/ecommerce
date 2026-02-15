@@ -277,7 +277,7 @@ For WSL2 users, ensure Docker Desktop is configured with WSL2 integration and `l
    DATABASE_URL="postgresql://username:password@localhost:5432/ss_ecommerce"
 
    # Redis
-   REDIS_HOST=localhost
+   REDIS_HOST=redis
    REDIS_PORT=6379
 
    # JWT Secrets

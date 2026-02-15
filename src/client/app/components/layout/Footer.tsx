@@ -26,7 +26,7 @@ const FooterLogo = () => (
       fontWeight="bold"
       fill="currentColor"
     >
-      SS-Commerce
+      RoHa Inc
     </text>
   </svg>
 );
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-400 mt-6 text-sm leading-relaxed">
-              Discover high-quality products at SS-Commerce. Shop with
+              Discover high-quality products at RoHa Inc. Shop with
               confidence and enjoy premium selections tailored just for you.
               Fast shipping, secure payments, and exceptional customer service.
             </p>
@@ -83,14 +83,14 @@ const Footer = () => {
                   size={18}
                   className="text-indigo-400 mr-3 flex-shrink-0"
                 />
-                <p className="text-sm text-gray-400">+1 (555) 123-4567</p>
+                <p className="text-sm text-gray-400">+1 (585) 466 0220</p>
               </div>
               <div className="flex items-center">
                 <Mail
                   size={18}
                   className="text-indigo-400 mr-3 flex-shrink-0"
                 />
-                <p className="text-sm text-gray-400">support@ss-commerce.com</p>
+                <p className="text-sm text-gray-400">rohainc@outlook.com</p>
               </div>
             </div>
 
@@ -160,6 +160,7 @@ const Footer = () => {
                     >
                       <span className="h-1 w-0 bg-indigo-500 rounded-full mr-0 group-hover:w-2 group-hover:mr-2 transition-all duration-200"></span>
                       About Us
+                      
                     </Link>
                   </li>
                   <li>
@@ -297,25 +298,25 @@ const Footer = () => {
                     icon: <Facebook size={18} />,
                     name: "Facebook",
                     bg: "bg-blue-600",
-                    href: "https://facebook.com/ss-commerce",
+                    href: "https://facebook.com/roha1",
                   },
                   {
                     icon: <Twitter size={18} />,
                     name: "Twitter",
                     bg: "bg-sky-500",
-                    href: "https://twitter.com/ss-commerce",
+                    href: "https://twitter.com/Robel93892360",
                   },
                   {
                     icon: <Instagram size={18} />,
                     name: "Instagram",
                     bg: "bg-pink-600",
-                    href: "https://instagram.com/ss-commerce",
+                    href: "https://instagram.com/kingroha",
                   },
                   {
                     icon: <Youtube size={18} />,
                     name: "YouTube",
                     bg: "bg-red-600",
-                    href: "https://youtube.com/ss-commerce",
+                    href: "https://youtube.com/haddis1",
                   },
                 ].map((social, idx) => (
                   <a
@@ -353,7 +354,7 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row text-center md:text-left items-center space-y-2 md:space-y-0 md:space-x-8 text-sm">
             <p className="text-gray-400">
-              © {currentYear} SS-Commerce. All rights reserved.
+              © {currentYear} RoHa Inc. All rights reserved.
             </p>
             <div className="flex space-x-4 text-gray-500">
               {[

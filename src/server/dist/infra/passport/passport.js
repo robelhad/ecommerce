@@ -13,12 +13,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = configurePassport;
+
 const passport_1 = __importDefault(require("passport"));
+
 const passport_google_oauth20_1 = require("passport-google-oauth20");
+
 const passport_facebook_1 = require("passport-facebook");
 const passport_twitter_1 = require("passport-twitter");
+
 const database_config_1 = __importDefault(require("@/infra/database/database.config"));
+console.log(`Server is running on test 1`);
 const tokenUtils_1 = require("@/shared/utils/auth/tokenUtils");
+
 function configurePassport() {
     // Google Strategy (unchanged)
     passport_1.default.use(new passport_google_oauth20_1.Strategy({

@@ -4,6 +4,7 @@ import authorizeRole from "@/shared/middlewares/authorizeRole";
 import { makeOrderController } from "./order.factory";
 
 const router = express.Router();
+
 const orderController = makeOrderController();
 
 /**
@@ -71,3 +72,4 @@ router.get("/user", protect, orderController.getUserOrders);
 router.get("/:orderId", protect, orderController.getOrderDetails);
 
 export default router;
+

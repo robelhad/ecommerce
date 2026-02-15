@@ -106,7 +106,7 @@ const CustomLoader = () => {
           className="mb-6"
         >
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            Welcome to SS-Commerce
+            Welcome to RoHa Inc
           </h2>
           <p className="text-gray-600">
             We&apos;re getting everything ready for you

@@ -25,7 +25,8 @@ const CartSummary: React.FC<CartSummaryProps> = ({
   const { showToast } = useToast();
 
   const stripePromise = loadStripe(
-    "pk_test_51R9gs72KGvEXtMtXXTm7UscmmHYsvk9j3ktaM8vxRb3evNJgG1dpD05YWACweIfcPtpCgOIs4HkpGrTCKE1dZD0p00sLC6iIBg"
+   // "pk_test_51R9gs72KGvEXtMtXXTm7UscmmHYsvk9j3ktaM8vxRb3evNJgG1dpD05YWACweIfcPtpCgOIs4HkpGrTCKE1dZD0p00sLC6iIBg"
+   "pk_test_51T0oezBy87a7LnLThk5vpNw8vu2CieIfdvm6GwstNQGsO2uAsIHjyPbR7pmiuTZ4OC2k9CXSCQOgvC5YV09kv0H1000x05u57u"
   );
 
   const [initiateCheckout, { isLoading }] = useInitiateCheckoutMutation();
